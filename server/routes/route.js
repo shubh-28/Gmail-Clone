@@ -11,5 +11,7 @@ routes.get('/emails/:type', getEmails);
 routes.post('/starred', toggleStarredEmail);
 routes.delete('/delete', deleteEmails);
 routes.post('/bin', moveEmailsToBin);
-
+routes.get('/', (req, res) => {
+    res.send("Hello World")
+});
 export default routes;
