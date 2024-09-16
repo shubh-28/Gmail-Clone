@@ -21,7 +21,7 @@ const Emails = () => {
 
     useEffect(() => {
         getEmailsService.call({}, type);
-    }, [type, starredEmail])
+    }, [type, starredEmail, getEmailsService])
 
     const selectAllEmails = (e) => {
         if (e.target.checked) {
