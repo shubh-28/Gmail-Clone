@@ -21,7 +21,8 @@ const Emails = () => {
 
     useEffect(() => {
         getEmailsService.call({}, type);
-    }, [type, starredEmail, getEmailsService])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [type, starredEmail])
 
     const selectAllEmails = (e) => {
         if (e.target.checked) {
